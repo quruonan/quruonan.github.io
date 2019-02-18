@@ -353,6 +353,751 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/18/运算符/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="quruonan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="March's Nites">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/18/运算符/" class="post-title-link" itemprop="url">Unbenannt</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-02-18 22:37:27" itemprop="dateCreated datePublished" datetime="2019-02-18T22:37:27+08:00">2019-02-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-02-17 23:07:16" itemprop="dateModified" datetime="2019-02-17T23:07:16+08:00">2019-02-17</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h5><p>算数运算符、自增自减运算符、逻辑运算符（布尔运算符）、关系运算符（比较运算符）、赋值运算符</p>
+<h6 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ - * / %</span><br></pre></td></tr></table></figure>
+<h6 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h6><p>一元运算符：只有一个操作数的运算符，自增自减运算符属于一元运算符。</p>
+<p>++ 自身加1</p>
+<p>–   自身减1</p>
+<ul>
+<li>前置++</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">++num1; 	<span class="comment">// 相当于：num1 = num1 + 1;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">6</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num1 + ++num2);		<span class="comment">//输出13，且num2为7</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>后置++</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">num1++;    <span class="comment">// 相当于  num1 = num1 + 1;</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">6</span> </span><br><span class="line"><span class="built_in">console</span>.log(num1 + num2++);		<span class="comment">//输出12，且num2为7</span></span><br></pre></td></tr></table></figure>
+<h6 id="逻辑运算符（布尔运算符）"><a href="#逻辑运算符（布尔运算符）" class="headerlink" title="逻辑运算符（布尔运算符）"></a>逻辑运算符（布尔运算符）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; 与  两个操作数同时为true，结果为true，否则都是false</span><br><span class="line">|| 或  两个操作数有一个为true，结果为true，否则为false</span><br><span class="line">!  非  取反</span><br></pre></td></tr></table></figure>
+<h6 id="关系运算符-比较运算符"><a href="#关系运算符-比较运算符" class="headerlink" title="关系运算符(比较运算符)"></a>关系运算符(比较运算符)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;  &gt;  &gt;=  &lt;=  == != === !==</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==与===的区别：==只进行值的比较（可能会发生类型转换），===要求类型和值都一样，则是相等</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> == <span class="number">55</span>;  	<span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> === <span class="number">55</span>; 	<span class="comment">// false 值相等，类型不相等</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">55</span> === <span class="number">55</span>; 	<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h6 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=   +=   -=   *=   /=   %=</span><br></pre></td></tr></table></figure>
+<h6 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">优先级从高到底</span><br><span class="line">	1. ()  优先级最高</span><br><span class="line">	2. 一元运算符  ++   --   !</span><br><span class="line">	3. 算术运算符  先*  /  %   后 +   -</span><br><span class="line">	4. 大小比较运算符  &gt;   &gt;=   &lt;   &lt;=</span><br><span class="line">	5. 相等比较运算符   ==   !=    ===    !==</span><br><span class="line">	6. 逻辑运算符 先 &amp;&amp;   后 ||</span><br><span class="line">	7. 赋值运算符</span><br><span class="line">	</span><br><span class="line">运算符优先级不用死记硬背，用的多了自然就知道执行顺序了。大致可以记一下这几条规则：</span><br><span class="line">1. 括号最优先</span><br><span class="line">2. 一元运算符紧随其后</span><br><span class="line">3. 先乘除后加减</span><br><span class="line">4. 算术运算符 &gt; 比较运算符 &gt; 逻辑运算符</span><br><span class="line">5. 赋值运算符最落后</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/18/表达式和语句/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="quruonan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="March's Nites">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/18/表达式和语句/" class="post-title-link" itemprop="url">Unbenannt</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-02-18 22:37:27" itemprop="dateCreated datePublished" datetime="2019-02-18T22:37:27+08:00">2019-02-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-02-17 22:59:35" itemprop="dateModified" datetime="2019-02-17T22:59:35+08:00">2019-02-17</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="表达式和语句"><a href="#表达式和语句" class="headerlink" title="表达式和语句"></a>表达式和语句</h4><h5 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h5><blockquote>
+<p>一个表达式可以产生一个值，有可能是运算、函数调用、有可能是字面量。表达式可以放在任何需要值的地方。</p>
+</blockquote>
+<h5 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h5><blockquote>
+<p>语句可以理解为一个行为，循环语句和判断语句就是典型的语句。一个程序有很多个语句组成，一般情况下，使用英文分号（;）分割一个一个的语句</p>
+</blockquote>
+<h4 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h4><blockquote>
+<p>程序的三种基本结构</p>
+</blockquote>
+<h5 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h5><p>从上到下执行的代码就是顺序结构</p>
+<h5 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h5><p>循环结构：重复做一件事情</p>
+<p>有多种循环结构的语句。</p>
+<h5 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h5><h6 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h6><p>单分支结构</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件表达式 */</span>) &#123;</span><br><span class="line">  <span class="comment">// 执行语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>双分支结构</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件表达式 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 否则执行语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>多分支结构</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件1 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="comment">/* 条件2 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="comment">/* 条件3 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 最后默认执行语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>案例 ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 求两个数中的最大值</span></span><br><span class="line"><span class="keyword">var</span> a = prompt(<span class="string">"第一个值"</span>);</span><br><span class="line"><span class="keyword">var</span> b = prompt(<span class="string">"第二个值"</span>);</span><br><span class="line"><span class="keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//判断一个整数是偶数还是奇数</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">7</span>;</span><br><span class="line"><span class="keyword">if</span> (a % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"偶数"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"奇数"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//判断一个年份是闰年还是平年</span></span><br><span class="line">n = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> s = n++ + n++;</span><br><span class="line"><span class="built_in">console</span>.log(s, n);</span><br><span class="line"><span class="keyword">var</span> year = <span class="built_in">parseInt</span>(prompt(<span class="string">'请输入年份'</span>));</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> year != <span class="built_in">Number</span>) &#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"请输入正确的年份"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">1</span> || year % <span class="number">400</span> == <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"闰年"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"平年"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">表达式<span class="number">1</span> ? 表达式<span class="number">2</span> : 表达式<span class="number">3</span></span><br><span class="line">是对<span class="keyword">if</span>……<span class="keyword">else</span>语句的一种简化写法</span><br><span class="line">案例：</span><br><span class="line"><span class="comment">// 判断一个人的年龄是否满18岁(是否成年)</span></span><br><span class="line"><span class="keyword">var</span> age = <span class="built_in">parseInt</span>(prompt(<span class="string">"input"</span>));</span><br><span class="line"><span class="keyword">var</span> r = age &gt;= <span class="number">18</span> ? <span class="string">"成年且年龄为:"</span> + age : <span class="string">"暂未成年"</span>;</span><br><span class="line"><span class="built_in">document</span>.write(r);</span><br></pre></td></tr></table></figure>
+<h6 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h6><p>语法格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (表达式) &#123;	<span class="comment">//这里表达式往往就是一个变量，当然也可以是一个常见的具有运算符的表达式</span></span><br><span class="line">  <span class="keyword">case</span> 常量<span class="number">1</span>:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> 常量<span class="number">2</span>:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> 常量<span class="number">3</span>:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  …</span><br><span class="line">  <span class="keyword">case</span> 常量n:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">break可以省略，如果省略，代码会继续执行下一个case</span><br><span class="line">switch语句在比较值时使用的是全等（===）运算符，因此不会发生类型转换。</span><br></pre></td></tr></table></figure>
+<p>案例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//素质教育（把分数变成ABCDE）</span></span><br><span class="line"><span class="keyword">var</span> score = prompt(<span class="string">"请输入"</span>);</span><br><span class="line"><span class="keyword">var</span> s = <span class="built_in">parseInt</span>(score / <span class="number">10</span>);</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">isNaN</span>(s)) &#123;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"数据错误"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">switch</span> (s) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">            <span class="built_in">document</span>.write(<span class="string">"A"</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">8</span>:</span><br><span class="line">            <span class="built_in">document</span>.write(<span class="string">"B"</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">            <span class="built_in">document</span>.write(<span class="string">"C"</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">            <span class="built_in">document</span>.write(<span class="string">"D"</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">            <span class="built_in">document</span>.writeg(<span class="string">"E"</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="built_in">document</span>.write(<span class="string">'不及格'</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>布尔类型的隐式转换</strong></p>
+<p>流程控制语句会把后面的值隐式转换成布尔类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">转换结果为false：  空字符串  0  NaN  undefined  null  false</span><br><span class="line">转换结果为true ：  除了上述几个值的其他所有数据</span><br></pre></td></tr></table></figure>
+<h5 id="循环结构-1"><a href="#循环结构-1" class="headerlink" title="循环结构"></a><strong>循环结构</strong></h5><blockquote>
+<p>在JavaScript中，循环语句有三种，while、do..while、for循环。</p>
+</blockquote>
+<h6 id="while语句"><a href="#while语句" class="headerlink" title="while语句"></a>while语句</h6><p>基本语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当循环条件为true时，执行循环体，</span></span><br><span class="line"><span class="comment">// 当循环条件为false时，结束循环。</span></span><br><span class="line"><span class="keyword">while</span> (循环条件) &#123;</span><br><span class="line">  <span class="comment">//循环体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="do…while语句"><a href="#do…while语句" class="headerlink" title="do…while语句"></a>do…while语句</h6><blockquote>
+<p>do..while循环和while循环非常像，二者经常可以相互替代，但是do..while的特点是不管条件成不成立，都会执行一次。</p>
+</blockquote>
+<p>基础语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  <span class="comment">// 循环体;</span></span><br><span class="line">&#125; <span class="keyword">while</span> (循环条件);</span><br></pre></td></tr></table></figure>
+<p>案例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">求<span class="number">100</span>以内所有<span class="number">3</span>的倍数的和</span><br><span class="line">使用<span class="keyword">do</span>-<span class="keyword">while</span>循环：输出询问<span class="string">"我爱你，嫁给我吧？"</span>，选择<span class="string">"你喜欢我吗？(y/n):"</span>，如果输入为y则打印<span class="string">"我们形影不离"</span>，若输入为n,则继续询问. </span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> answer = prompt(<span class="string">"你喜欢我吗？"</span>);</span><br><span class="line">&#125; <span class="keyword">while</span> (answer != <span class="string">'y'</span>);</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">'我们形影不离'</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a>for语句</h5><blockquote>
+<p>while和do…while一般用来解决无法确认次数的循环。for循环一般在循环次数确定的时候比较方便</p>
+</blockquote>
+<p>for循环语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// for循环的表达式之间用的是;号分隔的，千万不要写成,</span></span><br><span class="line"><span class="keyword">for</span> (初始化表达式<span class="number">1</span>; 判断表达式<span class="number">2</span>; 自增表达式<span class="number">3</span>) &#123;</span><br><span class="line">  <span class="comment">// 循环体4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>案例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">        <span class="keyword">var</span> k = i * j;</span><br><span class="line">        <span class="built_in">document</span>.write(i + <span class="string">'* '</span> + j + <span class="string">"="</span> + k + <span class="string">'\t'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">'&lt;br&gt;'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="continue和break"><a href="#continue和break" class="headerlink" title="continue和break"></a>continue和break</h5><blockquote>
+<p>break:立即跳出整个循环，即循环结束，开始执行循环后面的内容（直接跳到大括号）</p>
+<p>continue:立即跳出当前循环，继续下一次循环（跳到i++的地方）</p>
+</blockquote>
+<p>案例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 求200-300之间第一个能被7整数的数（break）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">200</span>; i &lt; <span class="number">300</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i % <span class="number">7</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">document</span>.write(i);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// capital本金10000元存入银行，年利率是千分之三，</span></span><br><span class="line"><span class="comment">// 每过1年，将本金和利息相加作为新的本金。</span></span><br><span class="line"><span class="comment">// 计算5年后，获得的本金是多少？</span></span><br><span class="line"><span class="comment">// var capital = prompt('输入本金');</span></span><br><span class="line"><span class="keyword">var</span> capital = <span class="number">10000</span>;</span><br><span class="line"><span class="keyword">var</span> year = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> s;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;= year; i++) &#123;</span><br><span class="line">    s = (capital * (<span class="number">3</span> / <span class="number">1000</span>) + capital) * year;</span><br><span class="line">    <span class="built_in">document</span>.write(s);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 求第n个斐波那契数，(1，1，2，3，5，8，13，21)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> n = <span class="built_in">window</span>.prompt(<span class="string">'请输入第几位'</span>);</span><br><span class="line"><span class="keyword">if</span> (n &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'输入错误'</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> n1 = <span class="number">1</span>,</span><br><span class="line">        n2 = <span class="number">1</span>,</span><br><span class="line">        n3;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">2</span>; i &lt; n; i++) &#123;</span><br><span class="line">            n3 = n1 + n2;</span><br><span class="line">            n1 = n2;</span><br><span class="line">            n2 = n3;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(n3);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/18/清除浮动的集中方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="quruonan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="March's Nites">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/18/清除浮动的集中方法/" class="post-title-link" itemprop="url">Unbenannt</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-02-18 22:37:01" itemprop="dateCreated datePublished" datetime="2019-02-18T22:37:01+08:00">2019-02-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-02-15 23:33:18" itemprop="dateModified" datetime="2019-02-15T23:33:18+08:00">2019-02-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>浮动对页面的影响：</p>
+</blockquote>
+<p>　　如果一个父盒子中有一个子盒子，并且父盒子没有设置高，子盒子在父盒子中进行了浮动，那么将来父盒子的高度为0.由于父盒子的高度为0，下面的元素会自动补位，所以这个时候要进行浮动的清除。</p>
+<blockquote>
+<p>关于清除浮动的方式:</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 方式一: 使用overflow属性来清除浮动</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.ovh&#123;</span><br><span class="line">   overflow:hidden;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>先找到浮动盒子的父元素，再在父元素中添加一个属性：overflow:hidden,就是清除这个父元素中的子元素浮动对页面的影响.</li>
+<li>注意：一般情况下也不会使用这种方式，因为overflow:hidden有一个特点，离开了这个元素所在的区域以后会被隐藏（overflow:hidden会将超出的部分隐藏起来）.</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 方式二:使用额外标签法　</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.clear&#123;</span><br><span class="line">    clear:both;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>在浮动的盒子之下再放一个标签，在这个标签中使用clear:both，来清除浮动对页面的影响.</li>
+</ol>
+<p>　　a.内部标签：会将这个浮动盒子的父盒子高度重新撑开.</p>
+<p>　　b.外部标签：会将这个浮动盒子的影响清除，但是不会撑开父盒子.</p>
+<ol start="2">
+<li>注意：一般情况下不会使用这一种方式来清除浮动。因为这种清除浮动的方式会增加页面的标签，造成结构的混乱.</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 方法三:使用伪元素来清除浮动(after意思:后来,以后)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:after&#123;</span><br><span class="line">  content:&quot;&quot;;</span><br><span class="line">  height:0;</span><br><span class="line">  line-height:0;</span><br><span class="line">  display:block;</span><br><span class="line">  visibility:hidden;</span><br><span class="line">  clear:both;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">.clearfix&#123;</span><br><span class="line">  zoom:1;为了兼容IE</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 方法四:使用双伪元素清除浮动</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:before,.clearfix:after &#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.clearfix &#123;</span><br><span class="line">    zoom: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总结:</p>
+<p>第一种方法会将超出部分隐藏在某些时候我们想清除浮动并且保留超出部分时做不到;</p>
+<p>第二种方法会增加许多不必要的标签,所以我们尽量使用第三种方法来清除浮动.</p>
+<p>为什么不选择第四种方法呢?因为第四种是第三种的改良版虽然比较简便,但是不严谨!</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/18/布局常用盒子居中方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="quruonan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="March's Nites">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/18/布局常用盒子居中方法/" class="post-title-link" itemprop="url">Unbenannt</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-02-18 22:37:01" itemprop="dateCreated datePublished" datetime="2019-02-18T22:37:01+08:00">2019-02-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-02-15 23:11:49" itemprop="dateModified" datetime="2019-02-15T23:11:49+08:00">2019-02-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="布局常用盒子居中方法"><a href="#布局常用盒子居中方法" class="headerlink" title="布局常用盒子居中方法"></a>布局常用盒子居中方法</h3><p>以下样式中的html均为下图所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;father&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;son&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>负margin居中</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line"> &#125;      </span><br><span class="line"> <span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f00</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>绝对定位居中</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.farter</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#cccccc</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#00ff00</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>transform居中</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">&#125;      </span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#0f0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>flex居中</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.farter</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#00ff00</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/18/数据类型及转换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -398,24 +1143,12 @@
                 
               
 
-              <time title="Post created: 2019-02-18 21:08:53" itemprop="dateCreated datePublished" datetime="2019-02-18T21:08:53+08:00">2019-02-18</time>
+              <time title="Post created: 2019-02-18 21:08:53 / Updated at: 22:36:29" itemprop="dateCreated datePublished" datetime="2019-02-18T21:08:53+08:00">2019-02-18</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-02-16 20:27:18" itemprop="dateModified" datetime="2019-02-16T20:27:18+08:00">2019-02-16</time>
               
             
           </span>
@@ -451,7 +1184,8 @@
       
         
           
-            <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h3><p>number、string、boolean、undefined、null</p>
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: 数据类型</span><br></pre></td></tr></table></figure>
+<h3 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h3><p>number、string、boolean、undefined、null</p>
 <h4 id="number-数值-类型"><a href="#number-数值-类型" class="headerlink" title="number(数值)类型"></a><strong>number(数值)类型</strong></h4><ul>
 <li><p>数值判断</p>
 <ul>
@@ -749,7 +1483,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
