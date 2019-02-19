@@ -97,12 +97,12 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="March&#39;s Nites">
+<meta property="og:title" content="March&#39;s Notes">
 <meta property="og:url" content="https://quruonan.github.io/index.html">
-<meta property="og:site_name" content="March&#39;s Nites">
+<meta property="og:site_name" content="March&#39;s Notes">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="March&#39;s Nites">
+<meta name="twitter:title" content="March&#39;s Notes">
 
 
 
@@ -119,7 +119,7 @@
   };
 </script>
 
-  <title>March's Nites</title>
+  <title>March's Notes</title>
   
 
 
@@ -179,7 +179,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">March's Nites</span>
+        <span class="site-title">March's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -353,262 +353,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/19/使用hexo+gitHub搭建个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="quruonan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="March's Nites">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/19/使用hexo+gitHub搭建个人博客/" class="post-title-link" itemprop="url">使用Hexo+GitHub搭建个人免费博客</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-19 19:38:54 / Modified: 19:49:50" itemprop="dateCreated datePublished" datetime="2019-02-19T19:38:54+08:00">2019-02-19</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>搭建环境</p>
-<p>Node.js安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">参考： https://nodejs.org/en/（ps：如果没有VPN的用户最好切换一下npm的源，不然后续的步骤可能会让你想砸电脑，安装完后，在命令窗口执行下面代码）</span><br><span class="line">       npm config set registry http://registry.cnpmjs.org     #切换npm为淘宝镜像</span><br></pre></td></tr></table></figure>
-<p>Git安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">参考http://www.runoob.com/git/git-install-setup.html</span><br></pre></td></tr></table></figure>
-<p>Hexo安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>安装成功后输入hexo，如果得到下面这个结果，恭喜你，安装成功！</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC5988epnf7e2KPDueTkCBGIFzEM1GwXD89uWRqudvibS1fN4rFKb3NOMoA/640?wx_fmt=png" alt="img"></p>
-<p>Hexo的常用命令说明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">参考：https://hexo.io/zh-cn/docs/commands.html</span><br></pre></td></tr></table></figure>
-<p>本地搭建测试Hexo</p>
-<p>随便什么地方创建一个空文件夹(将作为博客的工作目录，放置博客网站的内容)，鼠标点击右键文件夹，会出现 Git Bash ，点一下，这个时候 「黑窗口」 就会出现。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59icdxtN1iaA3aHQCnHyuEtzG3z52UZZz4ZkyBE8IWItiar5g3YxJ8bEo6A/640?wx_fmt=png" alt="img"></p>
-<p>输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59Yq3zibfho2UsYZPa7Gox2spjpoBt19h17aLqKlYrbpYlMNicqvyBia6mw/640?wx_fmt=png" alt="img"></p>
-<p>然后输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59oRWLJibibSZZpyPKD0rW2AC1cM7qww29qiay3iatBXvXwutuz79lIlXn0w/640?wx_fmt=png" alt="img"></p>
-<p>打开创建的文件夹查看是否初始化成功！</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59DWUF960lTGpGhZ9iak6ruRWoeiapibPZtHTmHIaiavlA2uO25rMH6dm79Q/640?wx_fmt=png" alt="img"></p>
-<p>初始化成功开始本地测试</p>
-<p>输入命令生成静态页面：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC596HYg93jSbdElNIiaj2cqvkzwggnqBM9xiaiciaicdCzHhBpdpeXcnUIlbOw/640?wx_fmt=png" alt="img"></p>
-<p>然后输入命令启动本地服务，进行文章预览调试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59JbNic2adHbY6uTKKBzC18EdM7c0E13PW4GbiasEJ9w5zfpKhd5INUSiaQ/640?wx_fmt=png" alt="img"></p>
-<p>成功启动本地服务，浏览器输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59ukU4HR6iaBIDN6icsKAFZ83USSpFYKjHhWCjIfZVPPQtV2hP6Ribm06nQ/640?wx_fmt=png" alt="img"></p>
-<p>修改Hexo主题</p>
-<p>当然，上面运行的只是Hexo官方默认的主题配置效果，想要个性一点？下面我们就将他改造成自己想要的个性主题。</p>
-<p>Hexo的主题都是一些前端民间高手写的模版，可以在官方收录的主题中去挑选：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-<p>看上一个主题后，点击下载</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59lbdzS2ibbEHsTtGyndKHTlEX4JJ66tqJ5qDlAI14X5elNC6BkzrIiblQ/640?wx_fmt=png" alt="img"></p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59SVACcWldoe3MfRNSY5PibviajyQezTR5icecE4WxPp2ibZlDXXylDzOiaow/640?wx_fmt=png" alt="img"></p>
-<p>主题下载完成后，将主题文件解压到hexo项目的themes文件夹下</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59ujniagXulaeiblenrb8WU6e1ibD3ibZnbbPeUhHnPIgKCiaZQiacWshegQWw/640?wx_fmt=png" alt="img"></p>
-<p>接下来就是修改Hexo的配置文件_config.yml，将里面theme 对应的值改为之前下载的主题的文件夹名字，本文里面下载的主题文件夹名字为hexo-theme-miho-master</p>
-<p>修改前：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59wpH711f9Bnx2U1kKibhaIicpVozFwFFnmIUD5JkDndb1GZAiaLhjpDICA/640?wx_fmt=png" alt="img"></p>
-<p>修改后：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC591BMveiacyrT7ez0QsxNzE2rvP4pLNxb61VsJyzyjvHmZ8mbRw11VZmA/640?wx_fmt=png" alt="img"></p>
-<p>更改完配置之后，重新启动本地服务器hexo s后结果如下图所示：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59N61O2bbiaWbicQ9HC4m22o9xT28BZoQohBsXCN9dEcuXvgEnfolDRxHg/640?wx_fmt=png" alt="img"></p>
-<p>关于Hexo中_config.yml 文件的其他配置，大家可以参考官方的文档，这里就不多赘述了：</p>
-<p>文档链接 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/configuration.html</a></p>
-<p>下载的每个主题中，有一个配置文件，名字也叫_config.yml，这里大家千万不要和之前Hexo根目录下的_config.yml搞混淆了，这里面配置的主要是些与主题相关的东西，比如一些文章阅读量，多说插件，cnzz站长工具等等的配置信息。一般里面也都有注释，这里就不赘述了，不懂的可以在我的博客问我。</p>
-<p>一些主题在GitHub上面也都有主题安装的一些文档，写的都很详细。</p>
-<p>编写博客文章</p>
-<p>如果你使用过MarkDown 来写博客文章的话，接下来就简单多了，没使用过也没关系，推荐大家一个编辑工具马克飞象 链接：<a href="https://maxiang.io/，在编辑器里面写好文章后，复制或另存为.md文件" target="_blank" rel="noopener">https://maxiang.io/，在编辑器里面写好文章后，复制或另存为.md文件</a>, 与普通的.md文件不同 要在文件开头添加下面代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: #文章标题</span><br><span class="line">date: #文章日期</span><br><span class="line">tags: #文章标签</span><br><span class="line">categories: #文章分类</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>生成静态HTML文件</p>
-<p>现在只能在本地启动项目然后通过本地地址访问博客网站，下面我们就可以利用Hexo生成静态Html，很简单，只需要在命令窗口执行下面代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &lt;folder&gt;   #切换到项目目录下</span><br><span class="line">    hexo generate   #生成静态文件到项目根目录的public文件夹中（可简写hexo g）</span><br></pre></td></tr></table></figure>
-<p>使用git 将项目上传到GitHub上</p>
-<p>首先要有GitHub账号,这就不用说了，没有的先注册，地址：<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a> </p>
-<p>没有仓库的话，先新创建一个仓库</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59wyKnpWL0iapibn2GxKcjO3EMKT3PNs4NN11Ex6lLpD1P1P0HZvEQNjXA/640?wx_fmt=png" alt="img"></p>
-<p>填写新仓库名称，备注信息。点击创建即可完成。</p>
-<p>注意：搭建个人博客的话，仓库名称格式必须为：owner.github.io</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59S7hRTUNgrk8Z4x5icNZsuB1pv5cI0HykepnuB2t96fwgRIWUj8pMia5g/640?wx_fmt=png" alt="img"></p>
-<p>我这里是因为已经存在这个项目名称了，所以出现警告，这个不用管，按格式来就行。</p>
-<p>因为本地Git仓库和GitHub仓库之间的传输是通过SSH加密传输的，GitHub需要识别是否是你推送，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送，所以需要配置ssh key。</p>
-<p>1.创建SSH Key。</p>
-<p>在用户主目录（C:\Users\Administrator）下，看看有没有.ssh文件，如果有，再看文件下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接到下一步。如果没有，打开Git Bash，输入命令，创建SSH Key</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;123@126.com&quot;  //自己注册的github邮箱</span><br></pre></td></tr></table></figure>
-<p>直接回车就可以了</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59G4UMziaLr0lKENhsEXfjnONVn1gbibESTqZAagfMvicB483yaP37csxNw/640?wx_fmt=png" alt="img"></p>
-<p>出现上图，就说创建成功了，再去用户主目录里找到<code>.ssh</code>文件夹，里面有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是SSH Key的秘钥对，<code>id_rsa</code>是私钥，不能泄露，<code>id_rsa.pub</code>是公钥，可以公开。</p>
-<p>2.接下来到GitHub上，打开“Account settings”–“SSH Keys”页面，然后点击“Add SSH Key”，填上Title（随意写），在Key文本框里粘贴 <code>id_rsa.pub</code>文件里的全部内容。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59k39Gzp0P1J5LgrLQRadlZ9sCjblPgk6oiburvUtL54IxynPGC6I1sjA/640?wx_fmt=png" alt="img"></p>
-<p>点“Add Key”，你就应该看到已经添加的Key，可以添加多个Key</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59F4pPLJDbtd6icQSZfMEDwopibwx3RKhKMOVCfFbCuEYI4g5UbkbDibXCQ/640?wx_fmt=png" alt="img"></p>
-<p>3.验证是否成功，在git bash里输入下面的命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>如果初次设置的话，会出现如下界面，输入yes 同意即可,可以不设置密码</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59p16oPiamEhibH1ibOTDOrGoibsnuASib8fiaVyKm0yjwx1Z32RWCFcoWTiaJQ/640?wx_fmt=png" alt="img"></p>
-<p>出现上图最后一行红框Hi username！部分就说明成功了</p>
-<p>4.下面开始设置username和email，因为github每次commit都会记录他们</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;name&quot; //你的github登录名</span><br><span class="line">$ git config --global user.email &quot;123@126.com&quot;  //你的github注册邮箱</span><br></pre></td></tr></table></figure>
-<p> 5.接下来就是把本地仓库传到github上去。</p>
-<p>标黄部分内容对本文来说属于扩展部分：</p>
-<p>之前在GitHub上建好一个新的仓库是，跳转的页面，完全按照上面的只是操作就可以了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:flora0103/example //关联一个远程库命令，git@github.com:flora0103/example.git 这个是自己的远程库</span><br><span class="line">$ git push -u origin master //关联后，第一推送master分支的所有内容命令。此后，每次本地提交后，就可以使用命令git push origin master推送最新修改</span><br></pre></td></tr></table></figure>
-<p>git与github连接成功以后：</p>
-<p>打开配置文档_config.yml,对它做如下修改，repository后面的内容是<a href="https://github.com/username/username.github.io.git" target="_blank" rel="noopener">https://github.com/username/username.github.io.git</a> 或者<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username/username.github.io.git</p>
-<p>url处修改为自己的域名地址</p>
-<p>注意：type、repository、branch冒号后面都有一个空格</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59u7ypkdHDSa0xw8V0fLu4cl92FYdNLpuibHuIveb76gzRjOichr9cnKDA/640?wx_fmt=png" alt="img"></p>
-<p><img src="C:\Users\qrn\AppData\Local\Temp\1550575085899.png" alt="1550575085899"></p>
-<p>部署好之后，我们就可以上传我们的代码了</p>
-<p>回到命令行窗口，输入npm install hexo-deployer-git –save，再输入hexo g，然后hexo d，就可以将我们public里面的代码上传了，在github上可以看到我们的代码，别人也可以通过域名访问我们的博客，例如：quruonan.github.io。</p>
-<p>注：每次修改配置文件以后都要输入hexo g和hexo deploy</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59afCxHYPKXv3fTicCLo8MkVnVyXBcshxLprYxiaeh4iaxNo6vb1Dh3jx2A/640?wx_fmt=png" alt="img"></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/18/运算符/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -618,7 +362,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="March's Nites">
+      <meta itemprop="name" content="March's Notes">
     </span>
 
     
@@ -647,14 +391,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Created: 2019-02-18 22:37:27" itemprop="dateCreated datePublished" datetime="2019-02-18T22:37:27+08:00">2019-02-18</time>
+              <time title="Post created: 2019-02-18 22:37:27" itemprop="dateCreated datePublished" datetime="2019-02-18T22:37:27+08:00">2019-02-18</time>
             
 
             
@@ -671,7 +415,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-19 19:50:05" itemprop="dateModified" datetime="2019-02-19T19:50:05+08:00">2019-02-19</time>
+                <time title="Updated at: 2019-02-19 19:50:05" itemprop="dateModified" datetime="2019-02-19T19:50:05+08:00">2019-02-19</time>
               
             
           </span>
@@ -685,7 +429,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
@@ -809,7 +553,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="March's Nites">
+      <meta itemprop="name" content="March's Notes">
     </span>
 
     
@@ -838,14 +582,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Created: 2019-02-18 20:28:49" itemprop="dateCreated datePublished" datetime="2019-02-18T20:28:49+08:00">2019-02-18</time>
+              <time title="Post created: 2019-02-18 20:28:49" itemprop="dateCreated datePublished" datetime="2019-02-18T20:28:49+08:00">2019-02-18</time>
             
 
             
@@ -975,8 +719,8 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -990,10 +734,8 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">categories</span>
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">Kategorien</span>
                   
                 </div>
               
@@ -1007,10 +749,8 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">tags</span>
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">Tags</span>
                   </a>
                 </div>
               
@@ -1060,7 +800,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
