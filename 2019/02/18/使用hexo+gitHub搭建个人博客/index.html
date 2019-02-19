@@ -96,20 +96,49 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="March&#39;s Nites">
-<meta property="og:url" content="https://quruonan.github.io/index.html">
+  <meta name="description" content="搭建环境 Node.js安装 12参考： https://nodejs.org/en/（ps：如果没有VPN的用户最好切换一下npm的源，不然后续的步骤可能会让你想砸电脑，安装完后，在命令窗口执行下面代码）       npm config set registry http://registry.cnpmjs.org     #切换npm为淘宝镜像 Git安装 1参考http://www.run">
+<meta name="keywords" content="Hexo GitHub 博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo+GitHub搭建个人免费博客">
+<meta property="og:url" content="https://quruonan.github.io/2019/02/18/使用hexo+gitHub搭建个人博客/index.html">
 <meta property="og:site_name" content="March&#39;s Nites">
+<meta property="og:description" content="搭建环境 Node.js安装 12参考： https://nodejs.org/en/（ps：如果没有VPN的用户最好切换一下npm的源，不然后续的步骤可能会让你想砸电脑，安装完后，在命令窗口执行下面代码）       npm config set registry http://registry.cnpmjs.org     #切换npm为淘宝镜像 Git安装 1参考http://www.run">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC5988epnf7e2KPDueTkCBGIFzEM1GwXD89uWRqudvibS1fN4rFKb3NOMoA/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59icdxtN1iaA3aHQCnHyuEtzG3z52UZZz4ZkyBE8IWItiar5g3YxJ8bEo6A/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59Yq3zibfho2UsYZPa7Gox2spjpoBt19h17aLqKlYrbpYlMNicqvyBia6mw/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59oRWLJibibSZZpyPKD0rW2AC1cM7qww29qiay3iatBXvXwutuz79lIlXn0w/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59DWUF960lTGpGhZ9iak6ruRWoeiapibPZtHTmHIaiavlA2uO25rMH6dm79Q/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC596HYg93jSbdElNIiaj2cqvkzwggnqBM9xiaiciaicdCzHhBpdpeXcnUIlbOw/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59JbNic2adHbY6uTKKBzC18EdM7c0E13PW4GbiasEJ9w5zfpKhd5INUSiaQ/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59ukU4HR6iaBIDN6icsKAFZ83USSpFYKjHhWCjIfZVPPQtV2hP6Ribm06nQ/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59lbdzS2ibbEHsTtGyndKHTlEX4JJ66tqJ5qDlAI14X5elNC6BkzrIiblQ/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59SVACcWldoe3MfRNSY5PibviajyQezTR5icecE4WxPp2ibZlDXXylDzOiaow/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59ujniagXulaeiblenrb8WU6e1ibD3ibZnbbPeUhHnPIgKCiaZQiacWshegQWw/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59wpH711f9Bnx2U1kKibhaIicpVozFwFFnmIUD5JkDndb1GZAiaLhjpDICA/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC591BMveiacyrT7ez0QsxNzE2rvP4pLNxb61VsJyzyjvHmZ8mbRw11VZmA/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59N61O2bbiaWbicQ9HC4m22o9xT28BZoQohBsXCN9dEcuXvgEnfolDRxHg/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59wyKnpWL0iapibn2GxKcjO3EMKT3PNs4NN11Ex6lLpD1P1P0HZvEQNjXA/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59S7hRTUNgrk8Z4x5icNZsuB1pv5cI0HykepnuB2t96fwgRIWUj8pMia5g/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59G4UMziaLr0lKENhsEXfjnONVn1gbibESTqZAagfMvicB483yaP37csxNw/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59k39Gzp0P1J5LgrLQRadlZ9sCjblPgk6oiburvUtL54IxynPGC6I1sjA/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59F4pPLJDbtd6icQSZfMEDwopibwx3RKhKMOVCfFbCuEYI4g5UbkbDibXCQ/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59p16oPiamEhibH1ibOTDOrGoibsnuASib8fiaVyKm0yjwx1Z32RWCFcoWTiaJQ/640?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59u7ypkdHDSa0xw8V0fLu4cl92FYdNLpuibHuIveb76gzRjOichr9cnKDA/640?wx_fmt=png">
+<meta property="og:image" content="c:/Users/qrn/AppData/Local/Temp/1550575085899.png">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59afCxHYPKXv3fTicCLo8MkVnVyXBcshxLprYxiaeh4iaxNo6vb1Dh3jx2A/640?wx_fmt=png">
+<meta property="og:updated_time" content="2019-02-19T11:45:41.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="March&#39;s Nites">
+<meta name="twitter:title" content="使用Hexo+GitHub搭建个人免费博客">
+<meta name="twitter:description" content="搭建环境 Node.js安装 12参考： https://nodejs.org/en/（ps：如果没有VPN的用户最好切换一下npm的源，不然后续的步骤可能会让你想砸电脑，安装完后，在命令窗口执行下面代码）       npm config set registry http://registry.cnpmjs.org     #切换npm为淘宝镜像 Git安装 1参考http://www.run">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC5988epnf7e2KPDueTkCBGIFzEM1GwXD89uWRqudvibS1fN4rFKb3NOMoA/640?wx_fmt=png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://quruonan.github.io/">
+  <link rel="canonical" href="https://quruonan.github.io/2019/02/18/使用hexo+gitHub搭建个人博客/">
 
 
 
@@ -119,7 +148,7 @@
   };
 </script>
 
-  <title>March's Nites</title>
+  <title>使用Hexo+GitHub搭建个人免费博客 | March's Nites</title>
   
 
 
@@ -167,8 +196,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -206,7 +234,7 @@
         
         
           
-          <li class="menu-item menu-item-首页 menu-item-active">
+          <li class="menu-item menu-item-首页">
 
     
     
@@ -336,200 +364,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/18/运算符/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="quruonan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="March's Nites">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/18/运算符/" class="post-title-link" itemprop="url">运算符</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-18 23:35:52" itemprop="dateCreated datePublished" datetime="2019-02-18T23:35:52+08:00">2019-02-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-02-19 19:46:35" itemprop="dateModified" datetime="2019-02-19T19:46:35+08:00">2019-02-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>##### </p>
-<p>算数运算符、自增自减运算符、逻辑运算符（布尔运算符）、关系运算符（比较运算符）、赋值运算符</p>
-<h6 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ - * / %</span><br></pre></td></tr></table></figure>
-<h6 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h6><p>一元运算符：只有一个操作数的运算符，自增自减运算符属于一元运算符。</p>
-<p>++ 自身加1</p>
-<p>–   自身减1</p>
-<ul>
-<li>前置++</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">++num1; 	<span class="comment">// 相当于：num1 = num1 + 1;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">6</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num1 + ++num2);		<span class="comment">//输出13，且num2为7</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>后置++</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">num1++;    <span class="comment">// 相当于  num1 = num1 + 1;</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">6</span> </span><br><span class="line"><span class="built_in">console</span>.log(num1 + num2++);		<span class="comment">//输出12，且num2为7</span></span><br></pre></td></tr></table></figure>
-<h6 id="逻辑运算符（布尔运算符）"><a href="#逻辑运算符（布尔运算符）" class="headerlink" title="逻辑运算符（布尔运算符）"></a>逻辑运算符（布尔运算符）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; 与  两个操作数同时为true，结果为true，否则都是false</span><br><span class="line">|| 或  两个操作数有一个为true，结果为true，否则为false</span><br><span class="line">!  非  取反</span><br></pre></td></tr></table></figure>
-<h6 id="关系运算符-比较运算符"><a href="#关系运算符-比较运算符" class="headerlink" title="关系运算符(比较运算符)"></a>关系运算符(比较运算符)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;  &gt;  &gt;=  &lt;=  == != === !==</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==与===的区别：==只进行值的比较（可能会发生类型转换），===要求类型和值都一样，则是相等</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> == <span class="number">55</span>;  	<span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> === <span class="number">55</span>; 	<span class="comment">// false 值相等，类型不相等</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">55</span> === <span class="number">55</span>; 	<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h6 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=   +=   -=   *=   /=   %=</span><br></pre></td></tr></table></figure>
-<h6 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">优先级从高到底</span><br><span class="line">	1. ()  优先级最高</span><br><span class="line">	2. 一元运算符  ++   --   !</span><br><span class="line">	3. 算术运算符  先*  /  %   后 +   -</span><br><span class="line">	4. 大小比较运算符  &gt;   &gt;=   &lt;   &lt;=</span><br><span class="line">	5. 相等比较运算符   ==   !=    ===    !==</span><br><span class="line">	6. 逻辑运算符 先 &amp;&amp;   后 ||</span><br><span class="line">	7. 赋值运算符</span><br><span class="line">	</span><br><span class="line">运算符优先级不用死记硬背，用的多了自然就知道执行顺序了。大致可以记一下这几条规则：</span><br><span class="line">1. 括号最优先</span><br><span class="line">2. 一元运算符紧随其后</span><br><span class="line">3. 先乘除后加减</span><br><span class="line">4. 算术运算符 &gt; 比较运算符 &gt; 逻辑运算符</span><br><span class="line">5. 赋值运算符最落后</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -561,10 +398,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/18/使用hexo+gitHub搭建个人博客/" class="post-title-link" itemprop="url">使用Hexo+GitHub搭建个人免费博客</a>
+          <h1 class="post-title" itemprop="name headline">使用Hexo+GitHub搭建个人免费博客
+
               
             
           </h1>
@@ -658,9 +493,7 @@
       
 
       
-        
-          
-            <p>搭建环境</p>
+        <p>搭建环境</p>
 <p>Node.js安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">参考： https://nodejs.org/en/（ps：如果没有VPN的用户最好切换一下npm的源，不然后续的步骤可能会让你想砸电脑，安装完后，在命令窗口执行下面代码）</span><br><span class="line">       npm config set registry http://registry.cnpmjs.org     #切换npm为淘宝镜像</span><br></pre></td></tr></table></figure>
 <p>Git安装</p>
@@ -757,8 +590,6 @@
 <p>注：每次修改配置文件以后都要输入hexo g和hexo deploy</p>
 <p><img src="https://mmbiz.qpic.cn/mmbiz_png/G1gf2kCVqnAN3LUdgpoicK4SrGfVvGC59afCxHYPKXv3fTicCLo8MkVnVyXBcshxLprYxiaeh4iaxNo6vb1Dh3jx2A/640?wx_fmt=png" alt="img"></p>
 
-          
-        
       
     </div>
 
@@ -779,161 +610,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://quruonan.github.io/2019/02/18/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="quruonan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="March's Nites">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/18/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-18 20:28:49" itemprop="dateCreated datePublished" datetime="2019-02-18T20:28:49+08:00">2019-02-18</time>
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Hexo-GitHub-博客/" rel="tag"># Hexo GitHub 博客</a>
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/18/运算符/" rel="prev" title="运算符">
+                运算符 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -943,14 +653,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1174,6 +885,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
 
   
 
@@ -1184,6 +899,8 @@
 
   
 
+
+  
 
 
   
