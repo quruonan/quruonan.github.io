@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[运算符]]></title>
+    <url>%2F2019%2F02%2F18%2F%E8%BF%90%E7%AE%97%E7%AC%A6%2F</url>
+    <content type="text"><![CDATA[算数运算符、自增自减运算符、逻辑运算符（布尔运算符）、关系运算符（比较运算符）、赋值运算符 算数运算符1+ - * / % 自增自减运算符一元运算符：只有一个操作数的运算符，自增自减运算符属于一元运算符。 ++ 自身加1 – 自身减1 前置++ 12345var num1 = 5;++num1; // 相当于：num1 = num1 + 1;var num2 = 6;console.log(num1 + ++num2); //输出13，且num2为7 后置++ 1234var num1 = 5;num1++; // 相当于 num1 = num1 + 1;var num2 = 6 console.log(num1 + num2++); //输出12，且num2为7 逻辑运算符（布尔运算符）123&amp;&amp; 与 两个操作数同时为true，结果为true，否则都是false|| 或 两个操作数有一个为true，结果为true，否则为false! 非 取反 关系运算符(比较运算符)1&lt; &gt; &gt;= &lt;= == != === !== 12345==与===的区别：==只进行值的比较（可能会发生类型转换），===要求类型和值都一样，则是相等var result = '55' == 55; // truevar result = '55' === 55; // false 值相等，类型不相等var result = 55 === 55; // true 赋值运算符1= += -= *= /= %= 运算符的优先级123456789101112131415优先级从高到底 1. () 优先级最高 2. 一元运算符 ++ -- ! 3. 算术运算符 先* / % 后 + - 4. 大小比较运算符 &gt; &gt;= &lt; &lt;= 5. 相等比较运算符 == != === !== 6. 逻辑运算符 先 &amp;&amp; 后 || 7. 赋值运算符 运算符优先级不用死记硬背，用的多了自然就知道执行顺序了。大致可以记一下这几条规则：1. 括号最优先2. 一元运算符紧随其后3. 先乘除后加减4. 算术运算符 &gt; 比较运算符 &gt; 逻辑运算符5. 赋值运算符最落后]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript 基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F02%2F18%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
