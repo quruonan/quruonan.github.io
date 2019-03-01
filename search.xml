@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[this在不同环境下的结果]]></title>
+    <url>%2F2019%2F03%2F02%2Fthis%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E7%BB%93%E6%9E%9C%2F</url>
+    <content type="text"><![CDATA[this在不同环境下的结果 在全局作用域中使用，指向全局对象window 在函数中使用： 根据函数调用方式不同，结果不同 简单调用：函数名（）；指向全局对象window 1234function fun () &#123; console.log(this); &#125;fun(); 作为方法调用：指向调用当前函数的对象(this的使用一般在方法中才有意义) 12345var obj = &#123;&#125;;obj.sayHi = function() &#123; console.log(this);&#125;;obj.sayHi(); 构造函数中的this，指向实例对象 12345function CreateObj() &#123; this.name = 'jack';&#125;var n = new CreateObj();console.log(n.name);]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数组]]></title>
     <url>%2F2019%2F02%2F20%2F%E6%95%B0%E7%BB%84%2F</url>
     <content type="text"><![CDATA[数组数组的概念 数组就是将多个元素（通常是同一类型）按一定顺序排列放到一个集合中，称这个集合为数组。 数组的定义 数组是一个有序（指的是数组的下标）的列表，可以在数组中存放任意的数据，并且数组的长度可以动态的调整。 遍历数组 遍历：遍及所有，对数组的每一个元素都访问一次就叫遍历。 数组遍历的基本语法： 123for(var i = 0; i &lt; arr.length; i++) &#123; // 数组遍历的固定结构&#125; 案例： 123456789101112131415161718192021222324252627282930313233343536// 求一组数中的最大值和最小值，以及所在位置var arr = [1, -4, 7, 3, 5];var max = arr[0];var min = arr[0];var pos_max = 0, pos_min = 0;for (var i = 0; i &lt; arr.length; i++) &#123; if (arr[i] &gt; max) &#123; max = arr[i]; pos_max = i; &#125; else if (arr[i] &lt; min) &#123; min = arr[i]; pos_min = i; &#125;&#125;console.log('max: ' + max + ' pos_max: ' + pos_max, 'min: ' + min + ' pos_min:' + pos_min);//冒泡排序，从小到大var arr = [1, 4, 7, 3, 5];for (var i = 0; i &lt; arr.length - 1; i++) &#123; for (var j = 0; j &lt; arr.length - 1; j++) &#123; if (arr[j] &gt; arr[j + 1]) &#123; var temp = arr[j]; arr[j] = arr[j + 1]; arr[j + 1] = temp; &#125; &#125;&#125;console.log(arr);// 翻转数组var arr = [1, 2, 3, 4, 5];for (var i = 0; i &lt; arr.length / 2; i++) &#123; var temp = arr[i]; arr[i] = arr[arr.length - 1 - i]; arr[arr.length - 1 - i] = temp;&#125;console.log(arr);]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[运算符]]></title>
@@ -24,24 +41,19 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>JavaScript基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[清除浮动的几种方法]]></title>
-    <url>%2F2019%2F02%2F18%2F%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E9%9B%86%E4%B8%AD%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[浮动对页面的影响： 如果一个父盒子中有一个子盒子，并且父盒子没有设置高，子盒子在父盒子中进行了浮动，那么将来父盒子的高度为0.由于父盒子的高度为0，下面的元素会自动补位，所以这个时候要进行浮动的清除。 关于清除浮动的方式: 方式一: 使用overflow属性来清除浮动 123.ovh&#123; overflow:hidden; &#125; 先找到浮动盒子的父元素，再在父元素中添加一个属性：overflow:hidden,就是清除这个父元素中的子元素浮动对页面的影响. 注意：一般情况下也不会使用这种方式，因为overflow:hidden有一个特点，离开了这个元素所在的区域以后会被隐藏（overflow:hidden会将超出的部分隐藏起来）. 方式二:使用额外标签法 123.clear&#123; clear:both; &#125; 在浮动的盒子之下再放一个标签，在这个标签中使用clear:both，来清除浮动对页面的影响. a.内部标签：会将这个浮动盒子的父盒子高度重新撑开. b.外部标签：会将这个浮动盒子的影响清除，但是不会撑开父盒子. 注意：一般情况下不会使用这一种方式来清除浮动。因为这种清除浮动的方式会增加页面的标签，造成结构的混乱. 方法三:使用伪元素来清除浮动(after意思:后来,以后) 123456789101112.clearfix:after&#123; content:&quot;&quot;; height:0; line-height:0; display:block; visibility:hidden; clear:both; &#125;.clearfix&#123; zoom:1;为了兼容IE&#125; 方法四:使用双伪元素清除浮动 123456789.clearfix:before,.clearfix:after &#123; content: &quot;&quot;; display: block; clear: both;&#125;.clearfix &#123; zoom: 1;&#125; 总结: 第一种方法会将超出部分隐藏在某些时候我们想清除浮动并且保留超出部分时做不到; 第二种方法会增加许多不必要的标签,所以我们尽量使用第三种方法来清除浮动. 为什么不选择第四种方法呢?因为第四种是第三种的改良版虽然比较简便,但是不严谨!]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript基础</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[布局常用盒子居中方法]]></title>
     <url>%2F2019%2F02%2F18%2F%E5%B8%83%E5%B1%80%E5%B8%B8%E7%94%A8%E7%9B%92%E5%AD%90%E5%B1%85%E4%B8%AD%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[以下样式中的html均为下图所示 123&lt;div class=&quot;father&quot;&gt; &lt;div class=&quot;son&quot;&gt;&lt;/div&gt;&lt;/div&gt; 负margin居中 1234567891011121314151617.father &#123; position: relative; width: 200px; height: 150px; background-color: #ddd; margin: 100px auto; &#125; .son &#123; position: absolute; top: 50%; left: 50%; margin-top: -25px; margin-left: -25px; width: 50px; height: 50px; background-color: #f00; &#125; 绝对定位居中 123456789101112131415161718.farter &#123; position: relative; width: 200px; height: 200px; background-color: #cccccc; margin: 50px auto;&#125;.son &#123; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; width: 100px; height: 100px; background-color: #00ff00;&#125; transform居中 12345678910111213141516.father &#123; position: relative; width: 200px; height: 200px; background-color: #ddd; margin: 50px auto;&#125; .son &#123; position: absolute; width: 50px; height: 50px; background-color: #0f0; top: 50%; left: 50%; transform: translate(-50%, -50%);&#125; flex居中 1234567891011121314.farter &#123; display: flex; justify-content: center; align-items: center; width: 200px; height: 200px; background-color: #ddd; margin: 50px auto;&#125;.son &#123; width: 100px; height: 100px; background-color: #00ff00;&#125;]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[数据类型及转换]]></title>
@@ -51,7 +63,7 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>JavaScript基础</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
