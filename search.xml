@@ -1,47 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[this在不同环境下的结果]]></title>
-    <url>%2F2019%2F03%2F02%2Fthis%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E7%BB%93%E6%9E%9C%2F</url>
-    <content type="text"><![CDATA[this在不同环境下的结果 在全局作用域中使用，指向全局对象window 在函数中使用： 根据函数调用方式不同，结果不同 简单调用：函数名（）；指向全局对象window 1234function fun () &#123; console.log(this); &#125;fun(); 作为方法调用：指向调用当前函数的对象(this的使用一般在方法中才有意义) 12345var obj = &#123;&#125;;obj.sayHi = function() &#123; console.log(this);&#125;;obj.sayHi(); 构造函数中的this，指向实例对象 12345function CreateObj() &#123; this.name = 'jack';&#125;var n = new CreateObj();console.log(n.name);]]></content>
+    <title><![CDATA[var和let/const的区别]]></title>
+    <url>%2F2019%2F03%2F28%2Fvar%E5%92%8Clet%E3%80%81const%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[let和const是 ES6 新增的命令，用于声明变量，这两个命令跟 ES5 的var有许多不同，并且let和const也有一些细微的不同。 内容：var和let/const的区别 块级作用域 不存在变量提升 暂时性死区 不可重复声明 let、const声明的全局变量不会挂在顶层对象下面 const命令两个注意点: const 声明之后必须马上赋值，否则会报错 const 简单类型一旦声明就不能再更改，复杂类型(数组、对象等)指针指向的地址不能更改，内部数据可以更改。 为什么需要块级作用域?ES5只有全局作用域和函数作用域，没有块级作用域。 这带来很多不合理的场景: 内层变量可能覆盖外层变量 用来计数的循环变量泄露为全局变量 1234567891011121314var tmp = new Date();function f() &#123; console.log(tmp); // 想打印外层的时间作用域 if (false) &#123; var tmp = 'hello world'; // 这里声明的作用域为整个函数 &#125;&#125;f(); // undefinedvar s = 'hello';for (var i = 0; i &lt; s.length; i++) &#123; console.log(s[i]); // i应该为此次for循环使用的变量&#125;console.log(i); // 5 全局范围都可以读到 块级作用域 作用域 12345678function fn() &#123; let n = 5; if (true) &#123; let n = 10; console.log(n); // 10 内层的n &#125; console.log(n); // 5 当前层的n&#125; 块级作用域任意嵌套 1234&#123;&#123;&#123;&#123; &#123;let insane = 'Hello World'&#125; console.log(insane); // 报错 读不到子作用域的变量&#125;&#125;&#125;&#125;; 块级作用域真正使代码分割成块了 12345678&#123;let a = ...;...&#125;&#123;let a = ...;...&#125; 以上形式，可以用于测试一些想法，不用担心变量重名，也不用担心外界干扰 块级作用域声明函数： 在块级作用域声明函数，因为浏览器要兼容老代码，会产生一些问题！ 在块级作用域声明函数，最好使用匿名函数的形式。 123if(true)&#123; let a = function () &#123;&#125;; // 作用域为块级 令声明的函数作用域范围更清晰&#125; ES6 的块级作用域允许声明函数的规则，只在使用大括号的情况下成立，如果没有使用大括号，就会报错。 12345678910// 报错'use strict';if (true) function f() &#123;&#125; // 我们需要给if加个&#123;&#125; // 不报错'use strict';if (true) &#123; function f() &#123;&#125;&#125; 不存在变量提升变量提升的现象：在同一作用域下，变量可以在声明之前使用，值为 undefined ES5 时使用var声明变量，经常会出现变量提升的现象。 1234567// var 的情况console.log(foo); // 输出undefinedvar foo = 2;// let 的情况console.log(bar); // 报错ReferenceErrorlet bar = 2; 暂时性死区：只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量 12345var tmp = 123; // 声明if (true) &#123; tmp = 'abc'; // 报错 因为本区域有tmp声明变量 let tmp; // 绑定if这个块级的作用域 不能出现tmp变量&#125; 暂时性死区和不能变量提升的意义在于: 为了减少运行时错误，防止在变量声明前就使用这个变量，从而导致意料之外的行为。 不允许重复声明变量 在测试时出现这种情况:var a= &#39;声明&#39;;const a = &#39;不报错&#39;，这种情况是因为babel在转化的时候，做了一些处理，在浏览器的控制台中测试，就成功报错 let、const不允许在相同作用域内，重复声明同一个变量 123456789function func(arg) &#123; let arg; // 报错&#125;function func(arg) &#123; &#123; let arg; // 不报错 &#125;&#125; let、const声明的全局变量不会挂在顶层对象下面 浏览器环境顶层对象是: window node环境顶层对象是: global var声明的全局变量会挂在顶层对象下面，而let、const不会挂在顶层对象下面。如下面这个栗子 1234567var a = 1;// 如果在 Node环境，可以写成 global.a// 或者采用通用方法，写成 this.awindow.a // 1let b = 1;window.b // undefined const命令 一旦声明，必须马上赋值 123let p; var p1; // 不报错const p3 = '马上赋值'const p3; // 报错 没有赋值 const一旦声明值就不能改变 简单类型:不能改动12const p = '不能改变';p = '报错' 复杂类型:变量指针不能变考虑如下情况： 12345678910const p = ['不能改动'];const p2 = &#123; name: 'jack'&#125;;p[0] = '不报错';p2.name = '不报错';p = ['报错'];p2 = &#123; name: '报错'&#125;; const所说的一旦声明值就不能改变，实际上指的是：变量指向的那个内存地址所保存的数据不得改动 简单类型(number、string、boolean)：内存地址就是值,即常量(一变就报错). 复杂类型(对象、数组等)：地址保存的是一个指针，const只能保证指针是固定的(总是指向同一个地址),它内部的值是可以改变的(不要以为const就安全了！) 所以只要不重新赋值整个数组/对象， 因为保存的是一个指针，所以对数组使用的push、shift、splice等方法也是允许的，你就是把值一个一个全都删光了都不会报错。 复杂类型还有函数，正则等，这点也要注意一下。 总结:再总结一下，看到这些名词，脑子里应该会有对应的理解，如果没有的话，那可以再看看对应的内容。 var和let/const的区别: 块级作用域 不存在变量提升 暂时性死区 不可重复声明 let、const声明的全局变量不会挂在顶层对象下面 const命令两个注意点: let可以先声明稍后再赋值,而const在 声明之后必须马上赋值，否则会报错 const 简单类型一旦声明就不能再更改，复杂类型(数组、对象等)指针指向的地址不能更改，内部数据可以更改。 let、const使用场景: let使用场景：变量，用以替代var。 const使用场景：常量、声明匿名函数、箭头函数的时候。]]></content>
       <categories>
-        <category>JavaScript</category>
+        <category>ES6</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[数组]]></title>
-    <url>%2F2019%2F02%2F20%2F%E6%95%B0%E7%BB%84%2F</url>
-    <content type="text"><![CDATA[数组数组的概念 数组就是将多个元素（通常是同一类型）按一定顺序排列放到一个集合中，称这个集合为数组。 数组的定义 数组是一个有序（指的是数组的下标）的列表，可以在数组中存放任意的数据，并且数组的长度可以动态的调整。 遍历数组 遍历：遍及所有，对数组的每一个元素都访问一次就叫遍历。 数组遍历的基本语法： 123for(var i = 0; i &lt; arr.length; i++) &#123; // 数组遍历的固定结构&#125; 案例： 123456789101112131415161718192021222324252627282930313233343536// 求一组数中的最大值和最小值，以及所在位置var arr = [1, -4, 7, 3, 5];var max = arr[0];var min = arr[0];var pos_max = 0, pos_min = 0;for (var i = 0; i &lt; arr.length; i++) &#123; if (arr[i] &gt; max) &#123; max = arr[i]; pos_max = i; &#125; else if (arr[i] &lt; min) &#123; min = arr[i]; pos_min = i; &#125;&#125;console.log('max: ' + max + ' pos_max: ' + pos_max, 'min: ' + min + ' pos_min:' + pos_min);//冒泡排序，从小到大var arr = [1, 4, 7, 3, 5];for (var i = 0; i &lt; arr.length - 1; i++) &#123; for (var j = 0; j &lt; arr.length - 1; j++) &#123; if (arr[j] &gt; arr[j + 1]) &#123; var temp = arr[j]; arr[j] = arr[j + 1]; arr[j + 1] = temp; &#125; &#125;&#125;console.log(arr);// 翻转数组var arr = [1, 2, 3, 4, 5];for (var i = 0; i &lt; arr.length / 2; i++) &#123; var temp = arr[i]; arr[i] = arr[arr.length - 1 - i]; arr[arr.length - 1 - i] = temp;&#125;console.log(arr);]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[运算符]]></title>
-    <url>%2F2019%2F02%2F18%2F%E8%BF%90%E7%AE%97%E7%AC%A6%2F</url>
-    <content type="text"><![CDATA[算数运算符、自增自减运算符、逻辑运算符（布尔运算符）、关系运算符（比较运算符）、赋值运算符 算数运算符1+ - * / % 自增自减运算符一元运算符：只有一个操作数的运算符，自增自减运算符属于一元运算符。 ++ 自身加1 – 自身减1 前置++ 12345var num1 = 5;++num1; // 相当于：num1 = num1 + 1;var num2 = 6;console.log(num1 + ++num2); //输出13，且num2为7 后置++ 1234var num1 = 5;num1++; // 相当于 num1 = num1 + 1;var num2 = 6 console.log(num1 + num2++); //输出12，且num2为7 逻辑运算符（布尔运算符）123&amp;&amp; 与 两个操作数同时为true，结果为true，否则都是false|| 或 两个操作数有一个为true，结果为true，否则为false! 非 取反 关系运算符(比较运算符)1&lt; &gt; &gt;= &lt;= == != === !== 12345==与===的区别：==只进行值的比较（可能会发生类型转换），===要求类型和值都一样，则是相等var result = '55' == 55; // truevar result = '55' === 55; // false 值相等，类型不相等var result = 55 === 55; // true 赋值运算符1= += -= *= /= %= 运算符的优先级123456789101112131415优先级从高到底 1. () 优先级最高 2. 一元运算符 ++ -- ! 3. 算术运算符 先* / % 后 + - 4. 大小比较运算符 &gt; &gt;= &lt; &lt;= 5. 相等比较运算符 == != === !== 6. 逻辑运算符 先 &amp;&amp; 后 || 7. 赋值运算符 运算符优先级不用死记硬背，用的多了自然就知道执行顺序了。大致可以记一下这几条规则：1. 括号最优先2. 一元运算符紧随其后3. 先乘除后加减4. 算术运算符 &gt; 比较运算符 &gt; 逻辑运算符5. 赋值运算符最落后]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript 基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[表达式和语句]]></title>
-    <url>%2F2019%2F02%2F18%2F%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E8%AF%AD%E5%8F%A5%2F</url>
-    <content type="text"><![CDATA[表达式 一个表达式可以产生一个值，有可能是运算、函数调用、有可能是字面量。表达式可以放在任何需要值的地方。 语句 语句可以理解为一个行为，循环语句和判断语句就是典型的语句。一个程序有很多个语句组成，一般情况下，使用英文分号（;）分割一个一个的语句 流程控制 程序的三种基本结构 顺序结构从上到下执行的代码就是顺序结构 循环结构循环结构：重复做一件事情 有多种循环结构的语句。 分支结构if语句单分支结构 123if (/* 条件表达式 */) &#123; // 执行语句&#125; 双分支结构 12345if (/* 条件表达式 */)&#123; // 成立执行语句&#125; else &#123; // 否则执行语句&#125; 多分支结构 123456789if (/* 条件1 */)&#123; // 成立执行语句&#125; else if (/* 条件2 */)&#123; // 成立执行语句&#125; else if (/* 条件3 */)&#123; // 成立执行语句&#125; else &#123; // 最后默认执行语句&#125; 案例 ： 123456789101112131415161718192021222324252627// 求两个数中的最大值var a = prompt("第一个值");var b = prompt("第二个值");if (a &gt; b) &#123; console.log(a);&#125; else &#123; console.log(b);&#125;//判断一个整数是偶数还是奇数var a = 7;if (a % 2 == 0) &#123; console.log("偶数");&#125; else &#123; console.log("奇数");&#125;//判断一个年份是闰年还是平年n = 10;var s = n++ + n++;console.log(s, n);var year = parseInt(prompt('请输入年份'));if (typeof year != Number) &#123; document.write("请输入正确的年份");&#125; else if (year % 4 == 0 &amp;&amp; year % 100 != 1 || year % 400 == 0) &#123; document.write("闰年");&#125; else &#123; document.write("平年");&#125; 三元运算符1234567表达式1 ? 表达式2 : 表达式3是对if……else语句的一种简化写法案例：// 判断一个人的年龄是否满18岁(是否成年)var age = parseInt(prompt("input"));var r = age &gt;= 18 ? "成年且年龄为:" + age : "暂未成年";document.write(r); switch语句语法格式： 123456789101112131415161718switch (表达式) &#123; //这里表达式往往就是一个变量，当然也可以是一个常见的具有运算符的表达式 case 常量1: 语句; break; case 常量2: 语句; break; case 常量3: 语句; break; … case 常量n: 语句; break; default: 语句; break;&#125; 12break可以省略，如果省略，代码会继续执行下一个caseswitch语句在比较值时使用的是全等（===）运算符，因此不会发生类型转换。 案例： 123456789101112131415161718192021222324252627//素质教育（把分数变成ABCDE）var score = prompt("请输入");var s = parseInt(score / 10);if (isNaN(s)) &#123; document.write("数据错误");&#125; else &#123; switch (s) &#123; case 10: case 9: document.write("A"); break; case 8: document.write("B"); break; case 7: document.write("C"); break; case 6: document.write("D"); break; case 5: document.writeg("E"); break; default: document.write('不及格'); break; &#125; 布尔类型的隐式转换 流程控制语句会把后面的值隐式转换成布尔类型 12转换结果为false： 空字符串 0 NaN undefined null false转换结果为true ： 除了上述几个值的其他所有数据 循环结构 在JavaScript中，循环语句有三种，while、do..while、for循环。 while语句基本语法： 12345// 当循环条件为true时，执行循环体，// 当循环条件为false时，结束循环。while (循环条件) &#123; //循环体&#125; do…while语句 do..while循环和while循环非常像，二者经常可以相互替代，但是do..while的特点是不管条件成不成立，都会执行一次。 基础语法： 123do &#123; // 循环体;&#125; while (循环条件); 案例： 123456求100以内所有3的倍数的和使用do-while循环：输出询问"我爱你，嫁给我吧？"，选择"你喜欢我吗？(y/n):"，如果输入为y则打印"我们形影不离"，若输入为n,则继续询问. do &#123; var answer = prompt("你喜欢我吗？");&#125; while (answer != 'y');document.write('我们形影不离'); for语句 while和do…while一般用来解决无法确认次数的循环。for循环一般在循环次数确定的时候比较方便 for循环语法： 1234// for循环的表达式之间用的是;号分隔的，千万不要写成,for (初始化表达式1; 判断表达式2; 自增表达式3) &#123; // 循环体4&#125; 案例： 1234567for (var i = 1; i &lt;= 9; i++) &#123; for (var j = 1; j &lt;= i; j++) &#123; var k = i * j; document.write(i + '* ' + j + "=" + k + '\t'); &#125; document.write('&lt;br&gt;');&#125; continue和break break:立即跳出整个循环，即循环结束，开始执行循环后面的内容（直接跳到大括号） continue:立即跳出当前循环，继续下一次循环（跳到i++的地方） 案例： 123456789101112131415161718192021222324252627282930313233343536373839// 求200-300之间第一个能被7整数的数（break）for (var i = 200; i &lt; 300; i++) &#123; if (i % 7 == 0) &#123; document.write(i); break; &#125;&#125;// capital本金10000元存入银行，年利率是千分之三，// 每过1年，将本金和利息相加作为新的本金。// 计算5年后，获得的本金是多少？// var capital = prompt('输入本金');var capital = 10000;var year = 5;var s;for (var i = 1; i &lt;= year; i++) &#123; s = (capital * (3 / 1000) + capital) * year; document.write(s); break;&#125;// 求第n个斐波那契数，(1，1，2，3，5，8，13，21)var n = window.prompt('请输入第几位');if (n &lt;= 0) &#123; console.log('输入错误');&#125; else &#123; var n1 = 1, n2 = 1, n3; if (n &lt;= 2) &#123; console.log(1); &#125; else &#123; for (var i = 2; i &lt; n; i++) &#123; n3 = n1 + n2; n1 = n2; n2 = n3; &#125; console.log(n3); &#125;&#125;]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -53,17 +20,6 @@
       </categories>
       <tags>
         <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[数据类型及转换]]></title>
-    <url>%2F2019%2F02%2F18%2F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E8%BD%AC%E6%8D%A2%2F</url>
-    <content type="text"><![CDATA[简单数据类型number、string、boolean、undefined、null number(数值)类型 数值判断 NaN： 是这三个单词的缩写：Not a Number，表示“不是一个数字” NaN与任何值都不相等，包括它本身 isNaN（）：是is Not a Number，用来判断一个数据“是否不是一个数字”。 string（字符串）类型 字符串拼接 使用 + 号连接 两边只要有一个是字符串，那么 + 就是字符串拼接功能 两边如果都是数字，那么 + 就是算术运算的相加功能 boolean（布尔）类型 字面量：true和false，区分大小写 计算机内部储存：true为1，false为0 null（空）类型 null类型表示一个变量的值是一个特殊的“空值”（null） null类型有且只有一个数据：null null值需要明确给以赋值，类似：var object = null；否则如果没有赋值，就是undefined undefined（未定义）类型获取变量的类型​ typeof关键字可以获取变量的类型 数据类型转换转换成字符串类型 toString（） 12var num = 5；console.log(num.toString()); string() 1String()函数存在的意义：有些值没有toString()，这个时候可以使用String()。比如：undefined和null 拼接字符串方式 num + “”，当 + 两边一个操作符是字符串类型，一个操作符是其他类型的时候，会先把其他类型转换成字符串再进行字符串拼接，返回字符串 转换成数值类型 Number() 1Number（）可以把任意值转换成数值，如果要转换的字符串中有一个不是数值的字符，返回NaN parseInt（） 1234var num1 = parseInt('12.7abc');//返回12，如果第一个字符是数字会解析直到遇到非数字结束var num1 = parseInt('abc12.7');//返回NaN，如果第一个字符不是数字或者符号就返回NaN parseFloat（） 12parseFloat()把字符串转换成浮点数parseFloat()和parseInt非常相似，不同之处在于parseFloat会解析第一个. 遇到第二个.或者非数字结束；如果解析的内容里只有整数，解析成整数 +, -0等运算 1234var str = '500';console.log(+str); // 取正console.log(-str); // 取负console.log(str - 0); 转换成布尔类型 Boolean（） 任何数据都可以转换布尔类型 注意：只有 0 、“”（空字符串）、null、undefined、NaN这五个会转换成false，其他都会转换成true]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
